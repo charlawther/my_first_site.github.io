@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #00121a;
+    margin: 0;
+}
+
+.grid-item1 {
+    font-family: "Rubik Scribble", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #6694a5;
+    grid-area: header;
+    background-color: #00121a;
+    padding: 15px;
+    text-align: center;
+    font-size: 48px; /* Увеличиваем размер шрифта */
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    grid-template-areas:
+        'header header header header header header'
+        'menu main main main right right'
+        'menu footer footer footer footer footer';
+}
+
+.grid-item2 {
+    grid-area: menu;
+    background-color: #011523;
+    color: #6694a5;
+    padding: 30px;
+    border-radius: 1px;
+    text-align: center;
+}
+
+.grid-item3 {
+    grid-area: main;
+    background-color: #00121a;
+    padding: 10px;
+    border-radius: 1px;
+}
+
+.grid-item4 {
+    grid-area: center;
+    background-color: #00121a;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрируем изображение */
+}
+
+.grid-item5 {
+    grid-area: footer;
+    background-color: #011523;
+    padding: 10px;
+    text-align: center;
+    border-radius: 1px;
+    margin-bottom: 10px;
+}
+
+.menu_text {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.dop {
+    background-color: #091533;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.dop:hover {
+    background-color: #0c2a51;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.welcome_text {
+    color: #6694a5;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.welcome_tdesc::first-letter {
+    color: #6694a5;
+    font-weight: 600;
+}
+
+.card__desc {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: #366677;
+}
+
+.card__desc2 {
+    background-color: #011523;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    border: 4px solid  #00121a;
+}
+
+.card__desc2::first-line {
+    color: #6694a5;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.card__reviews {
+    font-size: 32px !important;
+    color: #6694a5;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card__img {
+    width: 70%; /* Увеличиваем ширину основной картинки */
+    height: auto;
+    background-size: cover;
+    padding: 50px;
+    border-radius: 40px;
+}
+
+.card__img:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+/* Медиа запросы */
+/* <600px */
+@media only screen and (max-width: 600px) {
+    .grid-item1 { grid-area: 1 / 1 / 1 / 7; }
+    .grid-item2 { grid-area: 2 / 1 / 2 / 7; }
+    .grid-item3 { grid-area: 3 / 1 / 3 / 7; }
+    .grid-item4 { grid-area: 4 / 1 / 4 / 7; }
+    .grid-item5 { grid-area: 5 / 1 / 5 / 7; }
+}
+
+/* 600>= */
+@media only screen and (min-width: 600px) {
+    .grid-item1 { grid-area: 1 / 1 / 1 / 7; }
+    .grid-item2 { grid-area: 2 / 1 / 4 / 2; }
+    .grid-item3 { grid-area: 2 / 2 / 2 / 7; }
+    .grid-item4 { grid-area: 3 / 2 / 3 / 7; }
+    .grid-item5 { grid-area: 4 / 1 / 4 / 7; }
+}
+
+/* 800>= */
+@media only screen and (min-width: 800px) {
+    .grid-container { width: 75%; margin: 0 auto; }
+    .grid-item1 { grid-area: 1 / 1 / 1 / 7; }
+    .grid-item2 { grid-area: 2 / 1 / 4 / 2; }
+    .grid-item3 { grid-area: 2 / 2 / 2 / 6; }
+    .grid-item4 { grid-area: 2 / 6 / 2 / 7; }
+    .grid-item5 { grid-area: 3 / 2 / 3 / 7; }
+}
+
+.title {
+    font-family: "Rubik Scribble", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #6694a5;
+    margin-bottom: 0;
+    font-size: 36px;
+}
