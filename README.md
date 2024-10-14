@@ -1,8 +1,6 @@
-Вот пример файла **README.md** на русском языке, который можно использовать для описания сайта:
 
----
-
-# Описание проекта
+# Ссылка на сайт
+https://charlawther.github.io/my_first_site.github.io/lana/indexlana.html
 
 ## Проект: **charlawtter** – музыкальный портал
 
